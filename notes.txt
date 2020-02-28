@@ -1,0 +1,536 @@
+**** Everything is python is object *****
+***  Every object contains set of methods ******
+
+Objects
+------
+
+number
+-------
+number can be integer or decimal or octal or hexa
+
+val = 10
+aval = 43.43
+
+string
+-----
+string can be defined in single or double or triple quotes
+
+name = 'python programming'
+aname = "unix shell scripting"
+bname  = """scala programming"""
+
+list  ( array in C )
+------------------
+list contains set of elements
+Elements can be set of numbers or strings or any combination
+list elements are defined in [].
+
+alist = [10,20,30,40]
+blist = ["unix","scala","spark","hadoop"]
+clist = [10,20,30,"hadoop"]
+
+
+tuple  ( READ ONLY )( IMMUTABLE )
+------
+Tuple contains set of elements.
+Elements can be set of numbers or strings or any combination
+tuple elements are defined in ().
+******  Elements inside tuple cannot be modified ********
+
+atup = (10,20,30,40)
+btup = ("hadoop","scala")
+ctup = (10,20,30,"scala")
+
+
+dictionary
+---------
+dictionary contains elements in key-value pairs
+dictionary elements are defined in {}.
+
+syntax :     object =  {key:value , key:value ,key:value }
+Example:       book =  {"chap1":10 ,"chap2":20 ,"chap3":30}
+               data =  {1:2,3:4,5:6}
+               info = {"chap1":['Mark','US','200pages'] ,"chap2":['Rita','US','200pages'],1:2}
+
+
+set
+------
+set is unordered collection of UNIQUE items.
+set elements are defined in {}.
+
+
+aset = {10,10,10,10,10,10,20}
+
+
+commenting in python
+------------------
+
+single line comments ( # )
+
+multi line comments
+-------------------
+all the lines defined in ''' and ''' are
+ignored by interpreter
+
+'''
+atup = (10,20,"hadoop")
+print(atup)
+#atup[0] = 10033
+'''
+
+
+"""
+atup = (10,20,"hadoop")
+print(atup)
+"""
+
+
+343.43.4.4
+
+giridhar@gmail.comfdfsafdsadf
+
+
+
+
+
+
+
+dir(__builtins__)
+
+frequently used functions
+--------------------------
+print()
+help()
+dir()
+len()
+input()          :capture input from keyboard
+range(start,stop)
+sum()
+isinstance()
+type()
+id()
+max()
+min()
+open()  : open the file
+          fobj = open(filename,"r")
+
+typecasting functions
+--------------------
+str()  int()  float() list()  tuple() dict() set()
+
+
+https://notepad.pw/k0e2ozr1
+
+statements
+-----------
+
+conditional statements
+---------------------
+if
+if-else
+if-elif-elif-elif......else
+
+
+control statements
+-----------------
+for
+while
+
+jump statements
+--------------
+break
+continue
+
+
+level1
+level1
+level1
+level1
+if cond:
+    level2
+    level2
+    level2
+    level2
+level1
+level1
+level1
+
+
+level1
+level1
+if cond:
+    leve2
+    level2
+    if cond:
+        level3
+        level3
+        level3
+    else:
+        level3
+        level3
+    level2
+    level2
+    level2
+else:
+    level2
+    
+
+operators
+------------
+arithmetic operators: + - *  % /
+relational operators : < <= > >= == !=
+logical operators :   and or not
+assignment operator ( ++ and -- are not allowed)
+
+val = 10
+val= val+ 10  (or)  val+=10
+val =val * 10 (or)  val*=10
+
+special operators
+------------------
+in
+as ( used in libraries and exception handling)
+
+if 10 in [10,20,30]:
+    # do something
+lang = "perl,unix,hadoop,scala,spark,ruby,go"
+if "python" in lang:
+    # true
+
+adict = {"chap1":10 ,"chap2":20}
+if  "chap3" in adict:
+    # true
+else:
+    # false
+
+file handling
+---------------
+
+- Working with flat files ( .csv .txt .conf .log ...... )
+
+- Working with third party files ( .xlsx .pdf .mp4 .docx ...... )
+
+opening the file
+----------------
+
+syntax :     object = open(filename,mode)
+example:        fr  = open("clients.txt","r")  -------------------> read operation
+
+                fw  = open("clients.txt","w")  -------------------> write operation
+                case1: If the file is not existing .. it creates a file
+                case2: If the file is already existing... it will overwrite the file content
+
+                fa  = open("clients.txt","a")  -------------------> append operation
+                case1: If the file is not existing .. it creates a file
+                case2: If the file is already existing... it appends the output to file 
+
+closing the file
+-----------------
+fr.close()
+
+
+read operation
+---------------
+- reading line by line
+- reading the complete file in list format
+- reading the complete file in string
+- using csv library
+- using pandas library 
+
+
+
+
+Exception handling
+------------------
+
+Syntax errors
+
+runtime error
+
+
+Handling the exception in runtime is known as
+exception handling
+
+-try
+-except
+-else
+-finally
+-raise
+
+
+library (or) package (or) module
+--------------------------------
+Every library contains set of methods defined by someone else.
+
+-builtlin libraries
+-third party libraries
+
+builtlin libraries :  builtin libraries are installed with the python software that are 
+-------------------   generally( logging,math,ftp,string, random ....) used by everyone 
+
+
+third party libraries: Depending on the requirement( cloud interaction , DB handling, web 		               development ),developer has to intall the third party library from 		       www.pypi.org
+
+importing library
+-----------------
+import math
+print(math.floor(34.4))   #34
+print(math.log(2))
+
+importing required methods ONLY    ( . opertor is not required in this context )
+-------------------------------
+from math import floor,log
+print(floor(45.3))
+print(log(3))
+
+importing library with alias name
+--------------------------------
+import math as m
+print(m.floor(432.2))
+print(m.tan(3))
+
+importing everything
+---------------------
+from math import *
+print(floor(45.3))
+print(log(3))
+
+
+
+os         : os level activities
+math       : mathematical operations
+sys        :  sys and python config data
+shutil     : copy,move, rmtree  etc
+urllib     : read the web, downloading the files
+logging    : logging all the events
+smtplib    : sending the mails
+ftplib     : performing ftp operations
+sysconfig  :  sys and python config data
+zipfile    : create/extract the zip files
+rarfile    : create/extract the rar files
+cryptopgraphy : encrypting and decrypting the data or files
+tarfile    : create/extract the tar files
+filecmp    : comparing files or directories
+sqlite3    : python default database
+csv        : reading/writing csv files
+xml        : reading/writing xml files
+calendar   : display month,year calendar info
+datetime   : working with date n time
+time       : working with date n time
+fractions  : working with decimal values
+glob       : display all the files
+heapq      : more of array operations ( getting largest among list )
+subprocess : executing system commands in python (  subprocess.getoutput("ls -ltr")
+pdb        : python debugger
+platform   : platform information
+random     : random operations ( shuffling , random digit ... )
+re         : grep + awk + sed
+socket     : networking programming
+stat       : stats of the file
+statistics : basic statistics
+telnetlib  : accessing remote servers 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+intalling library
+-------------------
+pip install libraryname
+
+check all the third party libraries
+--------------------------------------
+pip list
+
+installing particular version of library
+---------------------------------------
+pip install pymysql == 0.8.1
+
+installing library which is lesser than particular version
+---------------------------------------------------------
+pip install pymysql <= 0.8.1
+
+uninstalling the librayr
+------------------------
+pip uninstall pymysql
+
+intalling multiple libraries 
+---------------------------
+step1:
+requirements.txt
+----------------
+pymysql
+pymongo
+openpyxl
+
+step2:
+---------
+pip install -r requirements.txt
+
+installing manually with pip tool
+---------------------------------
+step1: download the file from www.pypi.org
+step2: pip install PyMySQL-0.9.3.tar.gz
+
+
+
+
+
+
+
+
+function (or) definition (or) module (or) block
+---------------------------------
+
+def add(a,b):
+   c = a + b
+   return c
+total = add(10,20)
+print(total)
+
+
+passing arguments
+------------------
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+
+
+
+
+regular expressions ( regex)
+---------------------------------
+awk + sed + grep
+
+
+-searching
+-matching ( only the beginning of string)
+-replacing
+-findall
+
+metacharacters (or) wildcard characters
+---------------------------------------
+^ :  match  at the beginning of the string
+     if re.search("^python", line)
+
+$ :  at the end of string
+     if re.search("python$", line)
+
+* :  zero or more occurences of preceding character
+     if re.search("pyt*hon", line)
+
+     python    -valid
+     pyhon     - valid
+     pytttthon - valid
+
++ : one or more occurence of the preceding character
+     if re.search("pyt+hon", line)
+
+     python    -valid
+     pyhon     - Invvalid
+     pytttthon - valid
+
+. :   any single character or digit
+      if re.search(".ython", line )
+
+?  :  either zero or one occurence of preceding
+     if re.search("pyt?hon", line)
+
+() : (pattern1|pattern2)
+     if re.search("python|java", line):
+
+[] :  character class
+      if re.search("[qwer]ython",line)
+      qython or wython or eython or rython
+
+{} : { min,max}
+      if re.search("pyt{2,5}hton",line)
+
+\d  : digit
+\s  : whitespace
+\w  : word boundary
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
