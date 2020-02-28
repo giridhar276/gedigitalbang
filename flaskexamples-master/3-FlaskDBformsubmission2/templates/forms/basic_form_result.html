@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h1>User sent data: </h1>
+    <h1>Information of the realestate properties:</h1>
+    <ul>
+	    {% for record in data  %}
+            <li>{{record}}</li>
+        {% endfor %}
+    </ul>
+  </body>
+</html>

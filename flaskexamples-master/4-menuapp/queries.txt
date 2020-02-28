@@ -1,0 +1,4 @@
+create database myflaskapp ;
+
+create table employees( name varchar(255) , email varchar(255), username
+varchar(255) , empid int(30) , location varchar(255), technology varchar(255) );

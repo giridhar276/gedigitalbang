@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Dashboard <small> Welcome </small></h1>
+
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>EmailID</th>
+      <th>Username</th>
+      <th>EMP ID</th>
+      <th>Location</th>
+      <th>Technology</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for article in articles %}
+      <tr>
+        <td>{{article.name}}</td>
+        <td>{{article.email}}</td>
+        <td>{{article.username}}</td>
+        <td>{{article.empid}}</td>
+		<td>{{article.location}}</td>
+		<td>{{article.technology}}</td>
+        
+        <td>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
